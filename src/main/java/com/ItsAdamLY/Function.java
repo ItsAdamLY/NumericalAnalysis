@@ -1,4 +1,4 @@
-package main.java.com.ItsAdamLY;
+package com.ItsAdamLY;
 
 public class Function
 {

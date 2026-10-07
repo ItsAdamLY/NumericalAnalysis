@@ -1,4 +1,4 @@
-package main.java.com.ItsAdamLY.Solvers;
+package com.ItsAdamLY.Solvers;
 
 public class LinAlg
 {

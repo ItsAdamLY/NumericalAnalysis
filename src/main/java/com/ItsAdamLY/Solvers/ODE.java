@@ -1,6 +1,6 @@
-package main.java.com.ItsAdamLY.Solvers;
+package com.ItsAdamLY.Solvers;
 
-import main.java.com.ItsAdamLY.Function;
+import com.ItsAdamLY.Function;
 
 public class ODE
 {
@@ -27,9 +27,10 @@ public class ODE
             double[] k3 = f.param(t + h / 2.0, linAlg.vAddition(y0, linAlg.vScalarMultiply(h / 2.0, k2)));
             double[] k4 = f.param(t + h, linAlg.vAddition(y0, linAlg.vScalarMultiply(h, k3)));
 
-            // y_{n+1} = y_n + h*(k1 + 2k2 + 2k3 + k4)/6 componentwise
+            // Approximate y for each component of the state vector
             for (int j = 0; j < y0.length; j++)
             {
+                // y_{n+1} = y_n + h*(k1 + 2k2 + 2k3 + k4)/6 componentwise
                 y[j] = y0[j] + h * (k1[j] + 2.0 * k2[j] + 2.0 * k3[j] + k4[j]) / 6.0;
             }
 

@@ -9,7 +9,7 @@ public class Main
         ODE ode = new ODE();
 
         double omega = 2.0;
-        Function.MathFunction function = (x, y) -> new double[]
+        MathFunction function = (x, y) -> new double[]
                 {
                         y[1],
                         (Math.exp(2*x)*Math.sin(x)) - 2*y[0] + 2*y[1]

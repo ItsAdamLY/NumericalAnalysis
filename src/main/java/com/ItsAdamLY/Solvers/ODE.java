@@ -1,6 +1,6 @@
 package com.ItsAdamLY.Solvers;
 
-import com.ItsAdamLY.Function;
+import com.ItsAdamLY.MathFunction;
 
 public class ODE
 {
@@ -11,7 +11,7 @@ public class ODE
         this.linAlg = new LinAlg();
     }
 
-    public double[][] RungeKutta4(Function.MathFunction f, double a, double b, double[] y0, double h)
+    public double[][] RungeKutta4(MathFunction f, double a, double b, double[] y0, double h)
     {
         int N = (int) ((b - a) / h);
 
